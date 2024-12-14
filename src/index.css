@@ -1,50 +1,141 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
-  --primary-color: #2e6e85;
+  --primary-color: #532734;
 }
 
 body {
-  background: #131722 !important;
-  font-family: "Montserrat Alternates", sans-serif;
-  color:white !important;
+  font-family: 'Poppins', sans-serif;
 }
 
-.bg_primary {
-  background: var(--primary-color);
+/* start navbar */
+.navbar{
+  background: var(--primary-color) !important;
 }
-.img{
-  height: 300px !important;
+.navbar .navbar-brand{
+  font-size:22px ;
+}
+
+.nav-link {
+  position: relative; 
+}
+
+.nav-link.active-link {
+  color: white; 
+}
+
+.nav-link.active-link::after {
+  content: "";
   display: block;
-  margin: auto;
-  }
-  .vote{
-      background: var(--primary-color);
-      padding: 5px;
-      top: 0;
-      right: 0;
-  }
-  .bg_nav{
-      
-      background: var(--primary-color);
+  width: 100%;
+  height: 4px;
+  background-color: red; 
+  position: absolute;
+  bottom: -2px; 
+  left: 0;
+}
+
+/* end navbar */
+
+/* start  hero */
+.hero{
+  background: url("./img/hero-bg.jpg") no-repeat  ;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+
+}
+
+.hero  h1{
+  font-size: 2.5rem !important;
+}
+.hero h1{
+  font-size: 3.5rem !important;
+}
+.hero h1{
+  font-size: 4.5rem !important;
+}
+
+.slick-dots li button{
+  background: white !important;
+  border-radius: 50%;
+}
+
+button.slick-arrow {
+  scale: 1.3;
+}
+
+/* end hero */
+
+/* start contact */
+.contact{
+  background: url("./img/us-bg.jpg") no-repeat ;
+  background-attachment: fixed;
+  background-size: cover;
+  /* height: 60VH; */
+}
+.contact hr ,.trainer hr ,.Registration hr{
+width: 60px;
+color: #ff2953;
+border: 3px solid !important;
+opacity: 1;
+}
+/* end contact */
+
+/* start heathy */
+.heathy{
+  background: url("./img/healthy-bg.jpg") no-repeat ;
+  background-attachment: fixed;
+  background-size: cover;
+}
+/* end heathy */
+
+/* start trainer */
+.trainer{
+  background:url("./img/trainer-bg.jpg") no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.trainer .imgbox {
+    position: relative; 
+}
   
+.trainer .boxsocial {
+    position: absolute; 
+    top: 100%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.8); 
+    padding: 0 15px;
+}
+
+/* end trainer */
+ .Registration{
+  background: #27223f;
+ }
+
+
+/* media  */
+
+@media screen and  (min-width: 1200px) {
+  /* navbar */
+  .navbar .collapse .w-50{
+    width: 35% !important;
   }
-  .fontawesome{
-      font-size: 60px;
-      padding: 0;
-      margin: 0;
+  
+}
+@media screen and  (max-width: 992px) {
+  /* navbar */
+  .navbar .collapse .ms-auto{
+   margin: auto !important;
   }
-  @media screen and (max-width: 768px){
-     .img{
-        width: 80% !important;
-      }
-      .vote{
-        padding: 5px;
-        top: 0;
-        right:10% !important;
-    }
-    button.btn.rounded-pill.p-0  {
-      width: 75% !important;
-      margin-bottom: 15px !important;
-    }
+  /* registrestion */
+  .Registration form {
+   width: 100% !important;
   }
+  
+}
+
+
+
